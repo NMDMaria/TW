@@ -1,0 +1,1023 @@
+
+@media only screen and (min-width: 320px) and (max-width: 1023px)
+{
+
+
+.body_style
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0;
+    max-width: 100%;
+    background-color:#fcf4db;
+    background-image: url("images/main_background.jpg");
+    background-repeat: repeat;
+}
+
+
+
+/* HEADER */
+.header_style
+    {
+        background-color: #fcf4db;
+        display: grid;
+        max-width: 100vw;
+        max-height: 100vh;
+        padding: 0;
+    }
+    
+
+
+    .container_header1
+    {
+
+       /* height: 237px; /* poza normala avea 190 -> 100% => resize regula de 3 simpla*/
+        background-color: #fcf4db;
+        display: grid;
+    }
+    
+
+    .imgheader
+    {
+        max-width: 0;
+        visibility: hidden;
+    }
+    
+
+    .header_logo::before
+    {
+        content:url("images/alternate_header.png");
+        height: 100%;
+        width: 100%;
+    }
+
+    .header_logo
+    {
+        display: flex; 
+        background-color: #fcf4db;
+    }
+    
+
+
+.container_header_meniu
+{
+    display: grid;
+    background-color: #ffc045;
+    grid-template-columns: 1% auto 3%;
+    grid-template-rows: auto;
+    max-width: 100vw;
+}
+
+
+#meniu
+{
+    margin: 10px 0px;
+    font-family: "Ebrima";
+    font-weight: 900;
+    font-size: 17pt;
+    color: #ff7f37;
+    list-style-type: none;
+    grid-column-start: 2; 
+    display: grid;
+    grid-template-columns:  0.4fr 0.3fr 0.3fr minmax(200px, 0.3fr) 0.3fr 1fr; /* might need to change them */
+}
+
+
+.meniu_item span
+{
+    color: #ff7f37;
+}
+
+.meniu_item_dropper:hover .submenu, .meniu_item_dropper:focus-within
+{
+    display: block;
+    visibility: visible;
+    margin-top: 10px;
+}
+
+
+.meniu_item_dropper:hover span
+{
+    color:#384386;
+    transition: color 2s ease-out;
+}
+
+
+.submenu
+{
+    padding: 0;
+    border-left: solid #384386 6px;
+    display: none;
+    position: absolute;
+    background-color:#ffc045;
+    visibility: hidden;
+    list-style: none;
+}
+
+.submenu li
+{
+    padding-left: 10px;
+}
+
+.submenu_item
+{
+    margin: 0;
+    padding: 15px;
+    text-decoration: none;
+    color: #ff7f37;
+}
+
+.submenu li:nth-of-type(2n + 1)
+{
+    background-color:#fcdcb3;
+}
+
+.meniu_item
+{
+    margin: 0;
+    justify-content: left;
+    padding-right: 20px;
+}
+
+.meniu_item_link
+{
+    text-decoration: none;
+    color: #ff7f37;
+}
+
+
+ /* MAIN ARTICLES */
+ .main
+ {
+     display: grid;
+     max-width: 100vw;
+     grid-template-columns: 2vw auto 2vw;
+     grid-template-rows: auto auto;
+     grid-template-areas:
+         ". left ."
+         ". right .";
+ }
+ 
+ .left_side_main
+ {
+     grid-area: left;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .left_side_main div
+ {
+     margin: 10px 0;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .left_side_main a
+ {
+     text-decoration: none;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .article
+ {
+     margin: 0;
+     border: 30px;
+     padding: 30px 30px;
+     background-color: #fcf4db;
+     display: grid;
+     justify-content: left;
+ 
+     grid-template-columns: auto;
+     grid-template-rows: 80% 20%;
+     grid-template-areas: 
+         ". imagine ."
+         ". text .";
+ }
+ 
+ .article img
+ {
+     width: 44%;
+     height: 44%;
+     align-self: center;
+ }
+ 
+ .article div
+ {
+     margin: 0;
+     margin-left: 10px;
+     grid-area: text;
+     flex-direction: column;
+     color: #182233;
+ }
+ 
+ .article div h2
+ {
+     margin: 0;
+     font-size: 3vh;
+     align-self: center;
+     font-family: "Playfair Display";
+     font-weight: bold;
+ }
+ 
+ .article div p
+ {
+     display: none;
+ }
+ 
+ .right_side_main
+ {
+     grid-area: right;
+     display: grid;
+ }
+ 
+ .right_side_main div
+ {
+     margin: 10px 0;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ .right_side_main div a
+ {
+     text-decoration: none;
+ }
+ 
+ .right_side_main div a img
+ {
+    width: 44%;
+    height: 44%;
+     align-self: center;
+ }
+ 
+ .right_side_main div a div
+ {
+     align-self: center;
+ }
+ 
+
+/* FOOTER */
+
+footer
+{
+    grid-row-start: 3;
+    max-width: 100vw;
+    background-color: #fcf4db;
+    display: grid;
+}
+
+#contact
+{
+    display: grid;
+    grid-template-columns: 40px 1fr 4fr 40px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". a b ."
+                        ". a b .";
+}
+
+.footer_upper
+{
+    grid-area: a;
+    background-color: #fcf4db;
+    display: grid;
+    grid-template-areas:
+     ". name ."
+     ". logo .";
+    padding: 10% 0;
+}
+
+.footer_down
+{
+    grid-area: b;
+    background-color:#fcdcb3;
+    margin: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+
+.footer_down div:nth-of-type(1)
+{
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 23px;
+    color:#ff6b16;
+}
+
+.footer_down p:first-of-type
+{
+    grid-row-start: 2;
+    padding: 0px 20px 0px 20px;
+    font-family: "Roboto Slab";
+    color:#ff7f37;
+}
+
+.footer_down div:last-of-type
+{
+   display: flex;
+   justify-content:center;
+   align-items: flex-start;
+}
+
+.footer_down form
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer_down button
+{
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 23px;
+    color:#ff6b16;
+    border: 2px solid#ffc045;
+    border-radius: 4px;
+    background-color: rgb(255, 241, 230);
+    transition-duration: 0.4s;
+}
+
+.footer_down button:hover
+{
+    box-shadow: 0 5px 5px 0 #ffc045;
+}
+
+
+.footer_upper div h1:hover
+{
+    animation: animatieFooter 5s;
+}
+
+@keyframes animatieFooter
+{
+    0% 
+    {
+        color: #ffc045;
+    }
+    25%
+    {
+        color: #ff7f37;
+    }
+    50% 
+    {
+      color:red;
+    }
+    75%
+    {
+        color: lime;
+    }
+    100%
+    {
+        color: #384386;
+    }
+}
+
+.footer_down div p
+{
+    grid-area: text;
+    font-family: "Roboto Slab";
+    color:#ff7f37;
+    margin-bottom: 30px;
+    justify-content: left;
+    align-self: center;
+}
+
+.footer_upper div:nth-child(1)
+{
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_upper div:nth-child(2)
+{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_upper div h1
+{
+    margin: 0;
+    color: #384386;
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-4-10 14:36:50
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+ @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+   
+
+    .footer_upper div img:hover
+    {
+        animation: wobble-hor-bottom 0.8s both;
+    }
+    
+.footer_upper div img
+{
+    height: 100%;
+    width: 100%;
+}
+
+
+.footer_dunga
+{
+    background-color: #ffc045;
+}
+}
+
+
+@media only screen and (min-width: 1024px)
+{
+
+
+.body_style
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0;
+    background-color:#fcf4db;
+    background-image: url("images/main_background.jpg");
+    background-repeat: repeat;
+}
+
+
+/* HEADER */
+.header_style
+{
+    background-color: #fcf4db;
+    display: grid;
+    padding: 0;
+}
+
+.container_header1
+{
+    background-color: #fcf4db;
+    display: grid; 
+    grid-template-columns: 10% auto 20%;
+}
+
+
+.imgheader
+{
+    max-height: 190px;
+    max-width: 1054px;
+}
+
+.header_logo
+{
+    display: flex; 
+    background-color: #fcf4db;
+    justify-content: center;
+    grid-column-start: 2;
+}
+
+.container_header_meniu
+{
+    min-width: 1300px;
+    display: grid;
+    background-color: #ffc045;
+    grid-template-columns: 1% auto 3%;
+    grid-template-rows: auto;
+}
+
+
+#meniu
+{
+    margin: 10px 0px;
+    font-family: "Ebrima";
+    font-weight: 900;
+    font-size: 17pt;
+    color: #ff7f37;
+    list-style-type: none;
+    grid-column-start: 2; 
+    display: grid;
+    grid-template-columns: 0.4fr 0.3fr 0.3fr minmax(200px, 0.3fr) 0.3fr 1fr; /* might need to change them */
+}
+
+.meniu_item span
+{
+    color: #ff7f37;
+}
+
+.meniu_item_dropper:hover .submenu, .meniu_item_dropper:focus-within
+{
+    display: block;
+    visibility: visible;
+    margin-top: 10px;
+}
+
+
+.meniu_item_dropper:hover span
+{
+    color:#384386;
+    transition: color 2s ease-out;
+}
+
+
+.submenu
+{
+    padding: 0;
+    border-left: solid #384386 6px;
+    display: none;
+    position: absolute;
+    background-color:#ffc045;
+    visibility: hidden;
+    list-style: none;
+}
+
+.submenu li
+{
+    padding-left: 10px;
+}
+
+.submenu_item
+{
+    margin: 0;
+    padding: 15px;
+    text-decoration: none;
+    color: #ff7f37;
+}
+
+.submenu li:nth-of-type(2n + 1)
+{
+    background-color:#fcdcb3;
+}
+
+.meniu_item
+{
+    margin: 0;
+    justify-content: left;
+    padding-right: 20px;
+}
+
+.meniu_item_link
+{
+    text-decoration: none;
+    color: #ff7f37;
+}
+
+
+/* MAIN ARTICLES */
+.main
+{
+    display: grid;
+    grid-template-columns: 10% 6fr 3vw 1fr 10%;
+}
+
+.left_side_main
+{
+    grid-column-start: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.left_side_main div
+{
+    margin: 10px 0;
+    display: grid;
+}
+
+.left_side_main a
+{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+.article
+{
+    margin: 0;
+    border: 30px;
+    padding: 30px 30px;
+    background-color: #fcf4db;
+    display: grid;
+    justify-content: left;
+
+    grid-template-columns: auto auto;
+    grid-template-areas: 
+        "imagine text";
+}
+
+.article img
+{
+    max-width: 420px;
+    max-height: 420px;
+}
+
+.article div
+{
+    margin: 0;
+    min-width: 100px;
+    max-height: 420px;
+    margin-left: 10px;
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* pt a nu iesi continutul din container */
+    white-space: pre-line; /* un fel de align left in word in loc sa fie tot textul spread pe linie*/
+    color: #182233;
+}
+
+.article div h2
+{
+    margin: 0;
+    font-size: 4vh;
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+
+.article div p
+{
+    font-family: "Roboto Slab";
+    font-size: 2vh;
+}
+
+.right_side_main
+{
+    grid-column-start: 4;
+    display: grid;
+}
+
+.right_side_main div
+{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.right_side_main div a
+{
+    text-decoration: none;
+}
+
+.right_side_main div a img
+{
+    max-width: 420px;
+    max-height: 420px;
+}
+
+.right_side_main div a div
+{
+    align-self: center;
+}
+
+
+/* FOOTER */
+
+footer
+{
+    grid-row-start: 3;
+    min-width: 1300px;
+    background-color: #fcf4db;
+    display: grid;
+}
+
+#contact
+{
+    display: grid;
+    grid-template-columns: 40px 1fr 4fr 40px;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". a b ."
+                        ". a b .";
+}
+
+.footer_upper
+{
+    grid-area: a;
+    background-color: #fcf4db;
+    display: grid;
+    grid-template-areas:
+     ". name ."
+     ". logo .";
+    padding: 10% 0;
+}
+
+
+
+.footer_down
+{
+    grid-area: b;
+    background-color:#fcdcb3;
+    margin: 20px;
+    display: grid;
+    grid-template-rows: auto auto auto;
+}
+.footer_down div:nth-of-type(1)
+{
+    padding: 0px 20px 0px 20px;
+    display: flex;
+    justify-content: center;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 23px;
+    color:#ff6b16;
+}
+
+.footer_down p:first-of-type
+{
+    grid-row-start: 2;
+    padding: 0px 20px 0px 20px;
+    font-family: "Roboto Slab";
+    color:#ff7f37;
+}
+
+.footer_down div:last-of-type
+{
+   display: flex;
+   justify-content:center;
+   align-items: flex-start;
+}
+
+.footer_down form
+{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.footer_down button
+{
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 23px;
+    color:#ff6b16;
+    border: 2px solid#ffc045;
+    border-radius: 4px;
+    background-color: rgb(255, 241, 230);
+    transition-duration: 0.4s;
+}
+
+.footer_down button:hover
+{
+    box-shadow: 0 5px 5px 0 #ffc045;
+}
+
+
+.footer_upper div h1:hover
+{
+    animation: animatieFooter 5s;
+}
+
+@keyframes animatieFooter
+{
+    0% 
+    {
+        color: #ffc045;
+    }
+    25%
+    {
+        color: #ff7f37;
+    }
+    50% 
+    {
+      color:red;
+    }
+    75%
+    {
+        color: lime;
+    }
+    100%
+    {
+        color: #384386;
+    }
+}
+
+.footer_down div p
+{
+    grid-area: text;
+    font-family: "Roboto Slab";
+    color:#ff7f37;
+    margin-bottom: 30px;
+    justify-content: left;
+    align-self: center;
+}
+
+.footer_upper div:nth-child(1)
+{
+    grid-area: name;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_upper div:nth-child(2)
+{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+
+.footer_upper div h1
+{
+    margin: 0;
+    color: #384386;
+    font-family: "Playfair Display";
+    font-weight: bold;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-4-10 14:36:50
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-bottom
+ * ----------------------------------------
+ */
+ @keyframes wobble-hor-bottom {
+    0%,
+    100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+    }
+    15% {
+      transform: translateX(-30px) rotate(-6deg);
+    }
+    30% {
+      transform: translateX(15px) rotate(6deg);
+    }
+    45% {
+      transform: translateX(-15px) rotate(-3.6deg);
+    }
+    60% {
+      transform: translateX(9px) rotate(2.4deg);
+    }
+    75% {
+      transform: translateX(-6px) rotate(-1.2deg);
+    }
+  }
+
+   
+
+    .footer_upper div img:hover
+    {
+        animation: wobble-hor-bottom 0.8s both;
+    }
+    
+.footer_upper div img
+{
+    height: 17vh;
+    width: 8vw;
+}
+
+
+.footer_dunga
+{
+    background-color: #ffc045;
+}
+}
+
+.dark_body
+{
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 0;
+    max-width: 100%;
+    background-color:#fcf4db;
+    background-image: linear-gradient(45deg,#3d3d3d, #4f4f4f), url("images/main_background.jpg");
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+}
+
+#meniu > li:last-child > input
+{
+    height: 80%;
+    opacity: 85%;
+    padding: 2% 0 ;
+}
+
+#cautare
+{
+    width: 100%;
+    display: flex;
+}
+
+#search
+{
+    min-width: 100px;
+    width: 10vw;
+    border: 2px solid#ffc045;
+    border-radius: 4px;
+    font-family: "Ebrima";
+    font-size: 12pt;
+    background-color: rgb(255, 241, 230);
+    transition: width 0.4s ease-in-out;
+}
+
+#search:focus 
+{
+    width: 40vw;
+}
+
+#join
+{
+    max-height: none;
+}
+
+#join form
+{
+    display: flex;
+    flex-direction: column;
+}
+
+#join form div
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.dark
+{
+    background-color: #1f1f1f;
+}
+
+.dark button
+{
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: 23px;
+    color:#737373;
+    border: 2px solid#121212;
+    border-radius: 4px;
+    background-color: #1c1c1c;
+    transition-duration: 0.4s;
+
+}
+
+.dark_form
+{
+    font-family: "Roboto Slab";
+    background-color: #363636;
+    color: #737373;
+    border: 2px solid #363636;
+}
+
+.dark button:hover
+{
+    box-shadow: 0 5px 5px 0 black;
+}
+
+.dark_Article
+{
+    background-color:#1c1c1c;
+}
+
+.dark_Article div p
+{
+    color: #737373;
+}
+
+.dark_Article div h2
+{
+    color: #737373;
+}
+
+.vdark
+{
+    background-color: #121212;
+}
+
+.dark_label
+{
+    font-family: "Roboto Slab";
+    color: #737373;
+}
